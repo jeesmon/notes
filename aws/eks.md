@@ -16,6 +16,21 @@
 
 ## Notes
 * NAT Gateway is required for node group to join nodes to cluster
+* For `kube2iam` work with EKS you need to add the following assume role policy to the EKS worker node role
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": "sts:AssumeRole",
+            "Resource": "*"
+        }
+    ]
+}
+```
+* To access VPCE from EKS worker node, add eks cluster security group to inbound rule of VPCE security group
 
 ## Links
 
