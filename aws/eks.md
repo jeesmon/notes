@@ -30,7 +30,7 @@
     ]
 }
 ```
-* To access VPCE from EKS worker node, add eks cluster security group to inbound rule of VPCE security group
+* To access VPCE (ex: Kinesis) from EKS worker node, add eks cluster security group to inbound rule of VPCE security group
 
 ## Links
 
