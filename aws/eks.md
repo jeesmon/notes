@@ -32,6 +32,21 @@
 ```
 * To access VPCE (ex: Kinesis) from EKS worker node, add eks cluster security group to inbound rule of VPCE security group
 
+## Node Group
+
+* List node groups
+```
+aws eks list-nodegroups --cluster-name my-cluster
+```
+* Describe node group
+```
+aws eks describe-nodegroup --cluster-name my-cluster --nodegroup-name my-node-group
+```
+* Update node group
+```
+aws eks update-nodegroup-config --cluster-name my-cluster --nodegroup-name my-node-group --scaling-config minSize=1,maxSize=3,desiredSize=2
+```
+
 ## Links
 
 * https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
